@@ -8,7 +8,7 @@ namespace AppCompteurHydro
 {
     public class CompteurHydro : ICompteurHydro
     {
-		
+		//Stocker la consommation actuelle exprimée en kwh
 		private int m_consommationActuelle;
         
 		
@@ -22,10 +22,13 @@ namespace AppCompteurHydro
         {
             m_consommationActuelle = 0;
         }
-		
-		public void Consommer(int pQuantitéKwh)
+        /// <summary>
+        /// Mettre à jour la consommation actuelle selon la quantité consommée
+        /// </summary>
+        /// <param name="pQuantitéKwh"></param>
+        public void Consommer(int pQuantitéKwh)
         {
-            m_consommationActuelle -= pQuantitéKwh;
+            m_consommationActuelle += pQuantitéKwh;
         }
     }
 }
